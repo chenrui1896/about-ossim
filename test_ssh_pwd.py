@@ -9,7 +9,7 @@ with open('/test/test') as f:
 rightPWd = open('right_pwd.txt', 'w+')
 wrongPWD = open('wrong_pwd.txt', 'w+')
 for line in lines:
-	ip, port, pwd = line.split(' ')
+	ip, pwd = line.split(' ')
 	try:
 		ssh.connect(hostname=ip, port=22, username='root', password=pwd)
 		#rightPWd.write(line)
